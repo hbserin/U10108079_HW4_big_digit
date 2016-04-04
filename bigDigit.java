@@ -16,6 +16,7 @@ public class bigDigit {
 		String firstNumber, secondNumber;
 		System.out.print("Enter first number：");
 		firstNumber = input.nextLine();
+		int[] array1; 
 		array1 = new int[firstNumber.length()];
 		for (int i = 0; i < firstNumber.length()-1; i++) {
 			String singleNumber1 = firstNumber.substring(i, i+1);
@@ -25,6 +26,7 @@ public class bigDigit {
 		//Enter and store the second number
 		System.out.println("Enter second number：");
 		secondNumber = input.nextLine();
+		int[] array2; 
 		array2 = new int[secondNumber.length()];
 		for (int i = 0; i < secondNumber.length()-1; i++) {
 			String singleNumber2 = secondNumber.substring(i, i+1);
@@ -32,7 +34,8 @@ public class bigDigit {
 		} 	
 
 		//store the answer
-		int lengthOfAnswer = max(firstNumber.length(), secondNumber.length());
+		int lengthOfAnswer = Math.max(firstNumber.length(), secondNumber.length());
+		int[] arrayOfAnswer; 
 		arrayOfAnswer = new int[lengthOfAnswer];
 	
 		//addition
