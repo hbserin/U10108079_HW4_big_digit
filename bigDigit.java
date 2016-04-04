@@ -39,7 +39,7 @@ public class bigDigit {
 		arrayOfAnswer = new int[lengthOfAnswer];
 	
 		//addition
-		for (int i = lengthOfAnswer; i = 0; i--){
+		for (int i = lengthOfAnswer; i >= 0; i--){
 			if (arrayOfAnswer[i] != 1){
 				arrayOfAnswer[i] = array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)];
 			}else{
@@ -53,7 +53,7 @@ public class bigDigit {
 
 		//print the answer
 		System.out.print("The answer：");		
-		if (arrayOfAnswer[i-1] = 1){
+		if (arrayOfAnswer[0] == 1){
 			for (int i = 0; i <= lengthOfAnswer; i++){
 				System.out.print(i);
 			}
