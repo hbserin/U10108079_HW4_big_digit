@@ -40,17 +40,14 @@ public class bigDigit {
 	
 		//addition
 		for (int i = lengthOfAnswer; i = 0; i--){
-			if (arrayOfAnswer[i] != 1 && array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)] < 10 )
+			if (arrayOfAnswer[i] != 1){
 				arrayOfAnswer[i] = array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)];
-			else if(arrayOfAnswer[i] = 1 && array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)] < 10 )
-				arrayOfAnswer[i] = 1 + array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)];		
-			else if(arrayOfAnswer[i] != 1 && array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)] > 10){
-				arrayOfAnswer[i] = array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)]-10;
-				arrayOfAnswer[i-1] = 1;
-			}	
-			else if(arrayOfAnswer[i] = 1 && array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)] > 10){
-				arrayOfAnswer[i] = 1 + array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)]-10;
-				arrayOfAnswer[i-1] = 1;
+			}else{
+				arrayOfAnswer[i] = 1 + array1[firstNumber.length()-1 -(lengthOfAnswer - i)] + array2[secondNumber.length()-1-(lengthOfAnswer - i)];				
+			}
+			
+			if(arrayOfAnswer[i] > 10){
+				arrayOfAnswer[i] = arrayOfAnswer[i] - 10;
 			}
 		}
 
